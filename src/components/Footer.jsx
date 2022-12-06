@@ -78,7 +78,7 @@ const Footer = () => {
     );
   });
   return (
-    <footer style={{ background: "rgba(35, 67, 17, 1)", padding: "50px 0" }}>
+    <footer style={{ background: "rgba(35, 67, 17, 1)", padding: "70px 0" }}>
       <div className="container">
         <div className="footer-row">
           <div className="footer-col-1">

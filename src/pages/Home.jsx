@@ -60,8 +60,8 @@ const Home = () => {
           <h3 className="title">Welcome</h3>
           {/*  */}
           <div className="row">
-            <div className="row">
-              <img src={thinking} alt="" style={{ paddingRight: "20px" }} />
+            <div className="row sub-row">
+              <img src={thinking} alt="" />
               <p className="sub-title">Did You Know?</p>
             </div>
             <Link
@@ -120,8 +120,8 @@ const Home = () => {
       <section className="article">
         <div className="container">
           <div className="row">
-            <div className="row">
-              <img src={messageIcon} alt="" style={{ paddingRight: "20px" }} />
+            <div className="row sub-row">
+              <img src={messageIcon} alt="" />
               <p className="sub-title">Articles</p>
             </div>
             <Link

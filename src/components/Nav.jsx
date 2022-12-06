@@ -1,14 +1,17 @@
 import React from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/logo.png";
 
 function Nav() {
+  // states for mobile navigation
+  const [mobile, setMobile] = useState(false);
   return (
     <div className="nav">
       <div className="logo">
         <img src={Logo} alt="" />
       </div>
-      <ul className="links">
+      <ul className={mobile ? "nav-links-mobile" : "links"}>
         <NavLink
           to="/"
           className="link"
@@ -58,6 +61,13 @@ function Nav() {
           Contact Us
         </NavLink>
       </ul>
+      {/* hamburger */}
+      <div className="hamburger" onClick={() => setMobile(!mobile)}>
+        {/* {mobile? <ImgBars/> : <Imgcross/>} */}
+        <span className="hamburger-span-top"></span>
+        <span className="hamburger-span-middle"></span>
+        <span className="hamburger-span-bottom"></span>
+      </div>
     </div>
   );
 }
