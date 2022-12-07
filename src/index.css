@@ -34,6 +34,7 @@ body {
   padding: 20px 0;
   position: relative;
 }
+
 /* mobile navigation */
 /* .nav-links-mobile {
   position: absolute;
@@ -596,7 +597,7 @@ body {
 
   /* welcome section */
   .welcome-sec h3,
-  .container > .row {
+  .container>.row {
     padding: 0 20px;
   }
 
@@ -730,6 +731,7 @@ body {
   footer .container {
     padding: 0 20px;
   }
+
   .footer-row {
     flex-direction: column;
   }
@@ -755,3 +757,226 @@ body {
     padding: 1px 0;
   }
 }
+
+
+/* Did you know section Begining */
+
+
+.didyouknow-container>h1 {
+  font-family: Lato;
+  font-size: 55px;
+  font-weight: 700;
+  color: #3F781E;
+  margin: 30px 0px;
+}
+
+.firstddyNews-case {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70vh;
+
+}
+
+.firstddyNews-case-left {
+  position: relative;
+  width: 65%;
+  height: 100%;
+  border-radius: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid rgba(0, 0, 0, 0.384);
+}
+
+.firstddyNews-case-left img {
+  width: 10%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.firstddyNews-case-right {
+  width: 30%;
+  height: 100%;
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.firstddyNews-case-right span {
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: 500;
+  color: #3F781E;
+}
+
+.firstddyNews-case-right h1 {
+  font-family: Lato;
+  font-size: 35px;
+  font-weight: 400;
+  margin: 20px 0px;
+  color: #234311;
+}
+
+.firstddyNews-case-right p {
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 400;
+  color: #234311;
+}
+.firstddyNews-case-right a {
+  text-decoration: none;
+}
+
+.secondddyNews-case {
+  margin: 70px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.secondddyNews-item {
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  margin: 40px 20px;
+  overflow: hidden;
+}
+
+.secondddyNews-top {
+  height: 60%;
+  border-radius: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.226);
+}
+
+.secondddyNews-top img {
+  width: 17%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.firstddyNews-bottom {
+  height: 40%;
+}
+
+.firstddyNews-bottom span {
+  font-family: Lato;
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: #3F781E;
+  margin: 10px 0px;
+}
+
+.firstddyNews-bottom h1 {
+  font-family: Lato;
+  font-size: 30px;
+  font-weight: 400;
+  color: #3F781E;
+}
+
+.secondddyNews-case a {
+  text-decoration: none;
+}
+
+.firstddyNews-bottom p {
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 10px;
+  color: black;
+}
+
+.full-news-case .firstddyNews-case-right {
+  width: 100%;
+}
+
+@media screen and (max-width: 1220px) {
+  .firstddyNews-case {
+    margin: 0px 20px;
+  }
+
+  .firstddyNews-case-right {
+    width: 35%;
+    padding: 0px 10px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .secondddyNews-case {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .firstddyNews-case {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .firstddyNews-case-left {
+    width: 100%;
+    height: 300px;
+  }
+
+  .firstddyNews-case-right {
+    padding: 0px;
+    width: 100%;
+  }
+
+  .firstddyNews-case-right span {
+    margin-top: 10px;
+  }
+
+  .firstddyNews-case-right h1 {
+    font-size: 25px;
+    margin: 10px 0px;
+  }
+
+  .firstddyNews-case-right p {
+    font-size: 15px;
+  }
+
+  .didyouknow-container>h1 {
+    text-align: center;
+    font-size: 35px;
+    margin: 30px 0px;
+  }
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+  .secondddyNews-case a {
+    text-decoration: none;
+    width: 95%;
+  }
+
+  .secondddyNews-item {
+    width: 100%;
+    height: 500px;
+    margin: 20px 0px;
+  }
+
+  .firstddyNews-bottom h1 {
+    font-size: 20px;
+  }
+
+  .firstddyNews-bottom p {
+    font-size: 14px;
+  }
+}
+
+
+/* Ending of did you know section  */
