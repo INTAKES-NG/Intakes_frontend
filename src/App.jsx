@@ -9,6 +9,7 @@ import {
   Contact,
   Error,
 } from "./components";
+import DidYouKnowSingle from "./pages/DidYouKnowSingle";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/restaurant" element={<Restaurant />} />
         <Route path="/didYouKnow" element={<DidYouKnow />} />
+        <Route path="/didYouKnow/:id" element={<DidYouKnowSingle />} />
         <Route path="/news" element={<News />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
