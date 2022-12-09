@@ -93,6 +93,8 @@ const DidYouKnowArticles = () => {
               }}
             >
               {article.title}
+              {/* {detailsData?.content} */}
+              {/* {article.title} */}
             </h3>
             <Link
               to={article.link}

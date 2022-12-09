@@ -10,6 +10,8 @@ import StayInTouch from "./StayInTouch";
 import Footer from "./Footer";
 import Article from "./Article";
 import DidYouKnowArticles from "./DidYouKnowArticles";
+import NewsComponent from "./NewsComponent";
+import NewsComponentSingle from "./NewsComponentSingle";
 
 export {
   Home,
@@ -23,5 +25,7 @@ export {
   StayInTouch,
   Footer,
   Article,
-  DidYouKnowArticles
+  DidYouKnowArticles,
+  NewsComponent,
+  NewsComponentSingle,
 };

@@ -13,6 +13,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 .container {
@@ -398,6 +399,126 @@ body {
   margin-top: 20px;
 }
 
+/* News section */
+.news-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.news-container-wrapper {
+  margin: 50px 0;
+}
+
+.news-item {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px 0 rgba(129, 178, 154, 0.3);
+  max-height: 300px;
+  /* height: 100%; */
+}
+
+.news-container .news-item-col-1 {
+  flex-basis: 65%;
+  background: rgba(242, 204, 143, 1);
+}
+
+.news-container .news-item-col-1 .news-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.news-container .news-item-col-1 .news-row .text-col {
+  flex-basis: 58%;
+  padding: 10px 20px;
+}
+
+.news-container .news-item-col-1 .news-row .text-col .news-title {
+  color: rgba(35, 67, 17, 1);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.news-container .news-item-col-1 .news-row .text-col .news-description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: rgba(98, 98, 98, 1);
+}
+
+.news-container .inner-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.news-container .inner-row .news-date {
+  color: rgba(35, 67, 17, 1);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+
+}
+
+.news-container .news-item-col-2 {
+  flex-basis: 34%;
+  background: rgba(129, 178, 154, 1);
+}
+
+.news-container .news-item-col-2 .row {
+  flex-direction: column;
+}
+
+.news-container .news-item-col-2 .col-2 {
+  padding: 10px;
+}
+
+.news-container .news-item-col-2 .news-title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.news-container .news-item-col-2 .news-description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: rgba(98, 98, 98, 1);
+}
+
+.news-container-2 {
+  flex-direction: row-reverse;
+}
+
+/* media queries */
+@media (max-width: 1024px) {
+  /* .container {
+    padding: 0 20px;
+  } */
+}
+
+@media (max-width: 600px) {
+  .news-container {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .news-item {
+    max-height: 600px;
+    margin: 10px 0;
+  }
+
+  .news-container .news-item-col-1 .news-row {
+    flex-direction: column;
+  }
+}
+
+
+
 /* stay in touch component */
 .stay_in_touch {
   margin: 100px 0;
@@ -597,7 +718,7 @@ body {
 
   /* welcome section */
   .welcome-sec h3,
-  .container>.row {
+  .container > .row {
     padding: 0 20px;
   }
 
@@ -758,16 +879,19 @@ body {
   }
 }
 
-
 /* Did you know section Begining */
 
+.did-you-know-wrapper {
+  background: rgba(255, 252, 232, 1);
+}
 
-.didyouknow-container>h1 {
-  font-family: Lato;
-  font-size: 55px;
+.did-you-know-title {
+  font-size: 65px;
+  text-align: left;
+  line-height: 96px;
   font-weight: 700;
-  color: #3F781E;
-  margin: 30px 0px;
+  color: #3f781e;
+  margin: 20px 0;
 }
 
 .firstddyNews-case {
@@ -775,7 +899,6 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 70vh;
-
 }
 
 .firstddyNews-case-left {
@@ -810,7 +933,7 @@ body {
   font-family: Lato;
   font-size: 20px;
   font-weight: 500;
-  color: #3F781E;
+  color: #3f781e;
 }
 
 .firstddyNews-case-right h1 {
@@ -834,13 +957,13 @@ body {
 .secondddyNews-case {
   margin: 70px 0px;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: flex-start;
   flex-wrap: wrap;
 }
 
 .secondddyNews-item {
-  width: 500px;
+  width: 550px;
   height: 500px;
   border-radius: 10px;
   margin: 40px 20px;
@@ -873,7 +996,7 @@ body {
   display: block;
   font-size: 15px;
   font-weight: 600;
-  color: #3F781E;
+  color: #3f781e;
   margin: 10px 0px;
 }
 
@@ -881,7 +1004,7 @@ body {
   font-family: Lato;
   font-size: 30px;
   font-weight: 400;
-  color: #3F781E;
+  color: #3f781e;
 }
 
 .secondddyNews-case a {
@@ -916,7 +1039,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
   }
 
   .firstddyNews-case {
@@ -947,17 +1069,14 @@ body {
     font-size: 15px;
   }
 
-  .didyouknow-container>h1 {
+  .didyouknow-container > h1 {
     text-align: center;
     font-size: 35px;
     margin: 30px 0px;
   }
 }
 
-
-
 @media screen and (max-width: 600px) {
-
   .secondddyNews-case a {
     text-decoration: none;
     width: 95%;
@@ -977,6 +1096,5 @@ body {
     font-size: 14px;
   }
 }
-
 
 /* Ending of did you know section  */

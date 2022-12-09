@@ -4,6 +4,7 @@ import {
   DidYouKnowArticles,
   Footer,
   Nav,
+  NewsComponent,
   StayInTouch,
 } from "../components";
 import { Link } from "react-router-dom";
@@ -308,6 +309,10 @@ const Home = () => {
             </SwiperSlide>
           </Swiper>
         </div>
+      </section>
+      {/* news section */}
+      <section className="news">
+        <NewsComponent/>
       </section>
       {/* stay in touch */}
       <StayInTouch />

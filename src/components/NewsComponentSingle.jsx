@@ -3,12 +3,11 @@ import { useLocation } from "react-router-dom";
 import logo from "../assets/white-logo.png";
 import { Footer, Nav, StayInTouch } from "../components";
 
-const DidYouKnowSingle = () => {
+const NewsComponentSingle = () => {
   const location = useLocation();
-  const detailsData = location?.state;
-
+  const newsData = location?.state;
   return (
-    <div className="wrapper">
+    <div className="single-news-wrapper">
       <div className="container">
         <Nav />
         <div className="didyouknow-container">
@@ -17,31 +16,30 @@ const DidYouKnowSingle = () => {
               <div
                 className="firstddyNews-case-left"
                 style={{
-                  backgroundImage: `url(${detailsData?.image_url})`,
+                  backgroundImage: `url(${newsData?.image_url})`,
                 }}
               >
                 <img src={logo} alt="" />
               </div>
               <div className="firstddyNews-case-right">
-                <h1>{detailsData?.title}</h1>
+                <h1>{newsData?.title}</h1>
               </div>
             </div>
             <div className="firstddyNews-case full-news-case">
               <div className="firstddyNews-case-right">
-                {/* <p>{detailsData?.content}</p> */}
+                {/* <p>{newsData?.content}</p> */}
 
                 <span style={{ marginTop: "30px" }}>
-                  Author: {detailsData?.creator}
-                  {/* Author: {detailsData?.author} */}
+                  Author: {newsData?.creator}
                 </span>
                 <span style={{ marginTop: "10px" }}>
-                  {/* Source: {detailsData?.source.name} */}
+                  {/* Source: {newsData?.source.name} */}
                 </span>
                 <span style={{ marginBottom: "30px" }}>
-                  Date Posted: {detailsData?.pubDate}
-                  {/* Date Posted: {detailsData?.publishedAt} */}
+                  Date Posted: {newsData?.pubDate}
+                  {/* Date Posted: {newsData?.publishedAt} */}
                 </span>
-                <p>{detailsData?.content}</p>
+                <p>{newsData?.content}</p>
               </div>
             </div>
           </div>
@@ -53,4 +51,4 @@ const DidYouKnowSingle = () => {
   );
 };
 
-export default DidYouKnowSingle;
+export default NewsComponentSingle;
