@@ -39,7 +39,7 @@ const DidYouKnow = () => {
       }
     } catch (error) {
       setLoading(false);
-      alert(error.message);
+      console.log(error.message);
     }
   };
 
