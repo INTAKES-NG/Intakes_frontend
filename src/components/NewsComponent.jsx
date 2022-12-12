@@ -10,7 +10,7 @@ import WhiteIcon from "../assets/white-nav-arrow.png";
 // loader
 import { FallingLines } from "react-loader-spinner";
 
-export const NewsComponent = () => {
+const NewsComponent = () => {
   // states
   const [newsData, setNewsData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -19,7 +19,7 @@ export const NewsComponent = () => {
   const fetchNews = async () => {
     try {
       const res = await axios.get(
-        "https://newsdata.io/api/1/news?apikey=pub_14327f30d41d156bb611e2f8adc5275f1894f&country=us,gb,ng&category=health" /**food */
+        "https://newsdata.io/api/1/news?apikey=pub_14368ab2138fb393bf9885224c719363db2aa&country=us,gb,ng&category=health" /**food */
       );
       setLoading(false);
       console.log(res);

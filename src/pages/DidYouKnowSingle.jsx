@@ -6,6 +6,7 @@ import { Footer, Nav, StayInTouch } from "../components";
 const DidYouKnowSingle = () => {
   const location = useLocation();
   const detailsData = location?.state;
+  console.log(location);
 
   return (
     <div className="wrapper">

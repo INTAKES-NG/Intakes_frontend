@@ -22,7 +22,7 @@ const DidYouKnow = () => {
       //   "https://newsapi.org/v2/top-headlines?country=us&apiKey=9ba2824ea5c84dd986cf38929e46120e"
       // );
       const res = await axios.get(
-        "https://newsdata.io/api/1/news?apikey=pub_143403e90291c1254eb6fea9b9c31f620dc34&country=us,gb,ng&category=health"
+        "https://newsdata.io/api/1/news?apikey=pub_14368ab2138fb393bf9885224c719363db2aa&country=us,gb,ng&category=health"
       );
       // const res = await axios.get('https://newsapi.org/v2/everything?q=health&from=2022-12-06&sortBy=latest&apiKey=9ba2824ea5c84dd986cf38929e46120e')
       setLoading(false);
@@ -33,6 +33,7 @@ const DidYouKnow = () => {
           JSON.stringify(res.data.results) /**from articles */
         );
         setArticleData(res.data.results);
+        // console.log(articleData);
         // } else {
         //   alert(res.data.message);
         // }
