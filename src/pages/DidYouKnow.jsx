@@ -1,163 +1,60 @@
-import axios from "axios";
-import React from "react";
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import logo from "../assets/white-logo.png";
-import hero from "../assets/hero.png";
-import { Footer, Nav, StayInTouch } from "../components";
-
-// loader spinner
-import { Circles } from "react-loader-spinner";
+import { React, useState } from "react";
+import logo from "../assets/newLogo.png";
+import {
+  Footer,
+  Nav,
+  StayInTouch,
+  getDidYouKnow,
+  Pagination,
+  paginate,
+} from "../components";
 
 const DidYouKnow = () => {
-  // const data = JSON.parse(localStorage.getItem("healthArticle"));
-  const [articleData, setArticleData] = useState([]);
-  // const [articleData, setArticleData] = useState(data ? data : []);
-  const [loading, setLoading] = useState(true);
-  // const [loading, setLoading] = useState(data ? false : true);
+  const [articles, setArticles] = useState(getDidYouKnow);
+  const [pageSize, setPageSize] = useState(4);
+  const [currentPage, setCurrentPage] = useState(1);
 
-  const fetchArticles = async () => {
-    try {
-      // const res = await axios.get(
-      //   "https://newsapi.org/v2/top-headlines?country=us&apiKey=9ba2824ea5c84dd986cf38929e46120e"
-      // );
-      const res = await axios.get(
-        "https://newsdata.io/api/1/news?apikey=pub_14368ab2138fb393bf9885224c719363db2aa&country=us,gb,ng&category=health"
-      );
-      // const res = await axios.get('https://newsapi.org/v2/everything?q=health&from=2022-12-06&sortBy=latest&apiKey=9ba2824ea5c84dd986cf38929e46120e')
-      setLoading(false);
-      if (res.data.status === "success") {
-        /**from ok */
-        localStorage.setItem(
-          "healthArticle",
-          JSON.stringify(res.data.results) /**from articles */
-        );
-        setArticleData(res.data.results);
-        // console.log(articleData);
-        // } else {
-        //   alert(res.data.message);
-        // }
-      }
-    } catch (error) {
-      setLoading(false);
-      console.log(error.message);
-    }
-  };
+  const article = paginate(articles, currentPage, pageSize);
 
-  useEffect(() => {
-    fetchArticles();
-  }, []);
-
-  if (loading) {
+  const mappedArticles = article.map((item) => {
     return (
-      <div>
-        <div className="container">
-          <Nav />
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              height: "50vh",
-            }}
-          >
-            <Circles
-              height="80"
-              width="80"
-              color="#4fa94d"
-              ariaLabel="circles-loading"
-              wrapperStyle={{}}
-              wrapperClass=""
-              visible={true}
-            />
+      <div className="did-you-know-item" key={item._id}>
+        <div className="relative-img" style={{ width: "100%", height: "100%" }}>
+          <img src={item.image} alt="" style={{ width: "100%" }} />
+        </div>
+        <div className="absolute-contents">
+          <div className="flex-item">
+            <img src={logo} alt="logo" />
+            <h3 className="title">{item.title}</h3>
           </div>
         </div>
       </div>
     );
-  }
+  });
+
+  // handle page change
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+    // change page
+  };
 
   return (
-    <div className="did-you-know-wrapper">
-      <div>
-        <div className="container">
-          <Nav />
-          <div className="didyouknow-container">
-            <h1>Did You Know?</h1>
-            <div className="didyouknow-container-inner">
-              <div className="firstddyNews-case">
-                <div
-                  className="firstddyNews-case-left"
-                  style={{
-                    backgroundImage: `url(${articleData[1]?.image_url})`,
-                    // backgroundImage: {articleData[1]?.urlToImage ? (`url(${articleData[1]?.urlToImage}))` : (``)},
-                    // backgroundImage: {articleData[1]?.urlToImage ? (`url(${articleData[1]?.urlToImage}))` : (``)},
-                  }}
-                >
-                  <img src={logo} alt="" />
-                </div>
-
-                <div className="firstddyNews-case-right">
-                  {/* <span>{articleData[1]?.publishedAt}</span> */}
-                  <span>{articleData[1]?.pubDate}</span>
-                  <Link
-                    to={`/didYouKnow/${articleData[1]?.title}`}
-                    state={articleData[1]}
-                  >
-                    <h1>{articleData[1]?.title}</h1>
-                  </Link>
-                  <Link
-                    to={`/didYouKnow/${articleData[1]?.title}`}
-                    state={articleData[1]}
-                  >
-                    <p>{articleData[1]?.description}</p>
-                  </Link>
-                </div>
-              </div>
-
-              <div className="secondddyNews-case">
-                {articleData?.map((article) => {
-                  return (
-                    <Link
-                      key={article.title}
-                      to={`/didYouKnow/${article.title}`}
-                      state={article}
-                    >
-                      <div className="secondddyNews-item">
-                        <div
-                          className="secondddyNews-top"
-                          style={{
-                            backgroundImage: `url(${article.image_url})`,
-                            // backgroundImage: `url(${article.urlToImage})`,
-                          }}
-                        >
-                          <img src={logo} alt="" />
-                        </div>
-                        <div className="firstddyNews-bottom">
-                          <span>{article.pubDate}</span>
-                          {/* <span>{article.publishedAt}</span> */}
-
-                          <h1>{article.title}</h1>
-
-                          <p>{article.description}</p>
-                        </div>
-                      </div>
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-
-          <StayInTouch />
-        </div>
-        <Footer />
+    <div className="did-you-know did-you-know-wrapper">
+      <div className="container">
+        <Nav />
+        <h1 className="heading">Did You Know ?</h1>
+        <div className="content-wrapper grid">{mappedArticles}</div>
+        <Pagination
+          itemsCount={articles.length}
+          pageSize={pageSize}
+          currentPage={currentPage}
+          onPageChange={handlePageChange}
+        />
+        <StayInTouch />
       </div>
+      <Footer />
     </div>
   );
 };
-
-// const res = await axios.get(
-//   "https://newsdata.io/api/1/news?apikey=pub_14270221e8e65f436efc8b39c976a1200c75e&country=ng&category=health"
-// );
 
 export default DidYouKnow;

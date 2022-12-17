@@ -12,8 +12,16 @@ import Article from "./Article";
 import DidYouKnowArticles from "./DidYouKnowArticles";
 import NewsComponent from "./NewsComponent";
 import NewsComponentSingle from "./NewsComponentSingle";
+import OurValues from "./OurValues";
+import ResN from "../pages/ResN";
+import NewNews from "../pages/ArticlePage";
+import { getDidYouKnow } from "../exportData/DidYouKnowData";
+import Pagination from "./Pagination";
+import { paginate } from "../utils/paginate";
+import ArticlePage from "../pages/ArticlePage";
 
 export {
+  ResN,
   Home,
   About,
   Contact,
@@ -28,4 +36,10 @@ export {
   DidYouKnowArticles,
   NewsComponent,
   NewsComponentSingle,
+  OurValues,
+  NewNews,
+  getDidYouKnow,
+  Pagination,
+  paginate,
+  ArticlePage,
 };

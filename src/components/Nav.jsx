@@ -1,16 +1,19 @@
 import React from "react";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
-import Logo from "../assets/logo.png";
+import { Link, NavLink } from "react-router-dom";
+import Logo from "../assets/newLogo.png";
+
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { IoClose } from "react-icons/io5";
 
 function Nav() {
   // states for mobile navigation
   const [mobile, setMobile] = useState(false);
   return (
     <div className="nav">
-      <div className="logo">
+      <Link to="/" className="logo">
         <img src={Logo} alt="" />
-      </div>
+      </Link>
       <ul className={mobile ? "nav-links-mobile" : "links"}>
         <NavLink
           to="/"
@@ -22,13 +25,22 @@ function Nav() {
           Home
         </NavLink>
         <NavLink
-          to="/restaurant"
+          to="/news"
           className="link"
           style={({ isActive }) =>
             isActive ? { color: "red" } : { color: "#3F781E" }
           }
         >
-          Restaurant Listings
+          News
+        </NavLink>
+        <NavLink
+          to="/articles"
+          className="link"
+          style={({ isActive }) =>
+            isActive ? { color: "red" } : { color: "#3F781E" }
+          }
+        >
+          Article
         </NavLink>
         <NavLink
           to="/didYouKnow"
@@ -40,15 +52,6 @@ function Nav() {
           Did You Know?
         </NavLink>
         <NavLink
-          to="/news"
-          className="link"
-          style={({ isActive }) =>
-            isActive ? { color: "red" } : { color: "#3F781E" }
-          }
-        >
-          News
-        </NavLink>
-        <NavLink
           to="/about"
           className="link"
           style={({ isActive }) =>
@@ -57,16 +60,26 @@ function Nav() {
         >
           About Us
         </NavLink>
+        <NavLink
+          to="/restaurant"
+          className="link"
+          style={({ isActive }) =>
+            isActive ? { color: "red" } : { color: "#3F781E" }
+          }
+        >
+          Restaurant Listings
+        </NavLink>
         <NavLink to="/contact" className="link contact-btn">
           Contact Us
         </NavLink>
       </ul>
       {/* hamburger */}
       <div className="hamburger" onClick={() => setMobile(!mobile)}>
-        {/* {mobile? <ImgBars/> : <Imgcross/>} */}
-        <span className="hamburger-span-top"></span>
-        <span className="hamburger-span-middle"></span>
-        <span className="hamburger-span-bottom"></span>
+        {mobile ? (
+          <IoClose className="hamburger-icons" />
+        ) : (
+          <HiOutlineMenuAlt3 className="hamburger-icons" />
+        )}
       </div>
     </div>
   );

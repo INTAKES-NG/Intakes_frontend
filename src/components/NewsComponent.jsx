@@ -27,7 +27,7 @@ const NewsComponent = () => {
         setNewsData(res.data.results);
         //   console.log(newsData);
       } else {
-        alert(res.data.message);
+        console.log(res.data.message);
       }
     } catch (err) {
       setLoading(false);
@@ -67,15 +67,12 @@ const NewsComponent = () => {
           ariaLabel="falling-lines-loading"
         />
       </div>
-      //   <div>
-      //     <div className="container">Loading...</div>
-      //   </div>
     );
   }
 
   return (
     <div className="container">
-      <div className="row">
+      <div className="row row-header">
         <div className="row sub-row">
           <img src={newsIcon} alt="" />
           <p className="sub-title">News</p>
@@ -108,7 +105,7 @@ const NewsComponent = () => {
                 }}
               ></div>
               <div className="text-col">
-                <Link to={`/news/${newsData[0]?.title}`} state={newsData[0]}>
+                <Link to={`/new/${newsData[0]?.title}`} state={newsData[0]}>
                   <h3 className="news-title">{newsData[0]?.title}</h3>
                 </Link>
 
@@ -117,7 +114,7 @@ const NewsComponent = () => {
                   <div className="news-date">{newsData[0].pubDate}</div>
                   <div className="news-link">
                     <Link
-                      to={`/news/${newsData[0]?.title}`}
+                      to={`/new/${newsData[0]?.title}`}
                       state={newsData[0]}
                     >
                       <img
@@ -148,7 +145,7 @@ const NewsComponent = () => {
                 }}
               ></div>
               <div className="col-2">
-                <Link to={`/news/${newsData[1]?.title}`} state={newsData[1]}>
+                <Link to={`/new/${newsData[1]?.title}`} state={newsData[1]}>
                   <h3 className="news-title">{newsData[1]?.title}</h3>
                 </Link>
 
@@ -157,7 +154,7 @@ const NewsComponent = () => {
                   <div className="news-date">{newsData[1].pubDate}</div>
                   <div className="news-link">
                     <Link
-                      to={`/news/${newsData[1]?.title}`}
+                      to={`/new/${newsData[1]?.title}`}
                       state={newsData[1]}
                     >
                       <img
@@ -192,7 +189,7 @@ const NewsComponent = () => {
                 }}
               ></div>
               <div className="text-col">
-                <Link to={`/news/${newsData[2]?.title}`} state={newsData[2]}>
+                <Link to={`/new/${newsData[2]?.title}`} state={newsData[2]}>
                   <h3 className="news-title">{newsData[2]?.title}</h3>
                 </Link>
 
@@ -201,7 +198,7 @@ const NewsComponent = () => {
                   <div className="news-date">{newsData[2].pubDate}</div>
                   <div className="news-link">
                     <Link
-                      to={`/news/${newsData[2]?.title}`}
+                      to={`/new/${newsData[2]?.title}`}
                       state={newsData[2]}
                     >
                       <img
@@ -232,7 +229,7 @@ const NewsComponent = () => {
                 }}
               ></div>
               <div className="col-2">
-                <Link to={`/news/${newsData[4]?.title}`} state={newsData[4]}>
+                <Link to={`/new/${newsData[4]?.title}`} state={newsData[4]}>
                   <h3 className="news-title">{newsData[4]?.title}</h3>
                 </Link>
 
@@ -241,7 +238,7 @@ const NewsComponent = () => {
                   <div className="news-date">{newsData[4].pubDate}</div>
                   <div className="news-link">
                     <Link
-                      to={`/news/${newsData[4]?.title}`}
+                      to={`/new/${newsData[4]?.title}`}
                       state={newsData[4]}
                     >
                       <img

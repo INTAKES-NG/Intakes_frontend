@@ -7,39 +7,65 @@ const NewsComponentSingle = () => {
   const location = useLocation();
   const newsData = location?.state;
   return (
-    <div className="single-news-wrapper">
+    <div className="">
       <div className="container">
         <Nav />
-        <div className="didyouknow-container">
-          <div className="didyouknow-container-inner">
-            <div className="firstddyNews-case">
+        <div className="">
+          <div className="news-section">
+            <div className="row">
               <div
-                className="firstddyNews-case-left"
+                className=""
                 style={{
+                  flexBasis: "65%",
+                  height: "360px",
                   backgroundImage: `url(${newsData?.image_url})`,
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                  borderRadius: "8px",
                 }}
               >
                 <img src={logo} alt="" />
               </div>
-              <div className="firstddyNews-case-right">
-                <h1>{newsData?.title}</h1>
-              </div>
+              <div
+                className="news-article-section"
+                style={{
+                  flexBasis: "33%",
+                  // border: "2px solid red",
+                  height: "360px",
+                }}
+              ></div>
             </div>
-            <div className="firstddyNews-case full-news-case">
+            <div className="">
+              <h1 className="news-title">{newsData?.title}</h1>
+            </div>
+            <div className="firstddyNews-case full-news-case sss">
               <div className="firstddyNews-case-right">
-                {/* <p>{newsData?.content}</p> */}
-
-                <span style={{ marginTop: "30px" }}>
-                  Author: {newsData?.creator}
+                <p
+                  className="news-content"
+                  style={{
+                    fontWeight: "400",
+                    fontSize: "24px",
+                    lineHeight: "43px",
+                    letterSpacing: "2%",
+                    color: "rgba(35, 67, 17, 1)",
+                    margin: "10px 0",
+                  }}
+                >
+                  {newsData?.content}
+                </p>
+                <span
+                  style={{
+                    textAlign: "right",
+                    margin: "40px 0 10px",
+                    color: "rgba(63, 120, 30, 1)",
+                    fontWeight: "600",
+                    fontSize: "12px",
+                    lineHeight: "32px",
+                    display: "block",
+                  }}
+                >
+                  {newsData?.pubDate}
                 </span>
-                <span style={{ marginTop: "10px" }}>
-                  {/* Source: {newsData?.source.name} */}
-                </span>
-                <span style={{ marginBottom: "30px" }}>
-                  Date Posted: {newsData?.pubDate}
-                  {/* Date Posted: {newsData?.publishedAt} */}
-                </span>
-                <p>{newsData?.content}</p>
               </div>
             </div>
           </div>

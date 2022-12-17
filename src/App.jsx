@@ -9,6 +9,10 @@ import {
   Contact,
   Error,
   NewsComponentSingle,
+  ResN,
+  NewNews,
+  ArticlePage,
+  NewsComponent,
 } from "./components";
 import DidYouKnowSingle from "./pages/DidYouKnowSingle";
 
@@ -18,11 +22,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/restaurant" element={<Restaurant />} />
+        <Route path="/resN/:id" element={<ResN />} />
         <Route path="/didYouKnow" element={<DidYouKnow />} />
         <Route path="/didYouKnow/:id" element={<DidYouKnowSingle />} />
         <Route path="/news" element={<News />} />
-        <Route path="/news/:id" element={<NewsComponentSingle />} />
+        <Route path="/new/:id" element={<NewsComponentSingle />} />
         <Route path="/about" element={<About />} />
+        <Route path="/articles" element={<ArticlePage />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/*" element={<Error />} />
       </Routes>

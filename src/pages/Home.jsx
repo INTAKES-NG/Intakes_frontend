@@ -5,15 +5,16 @@ import {
   Footer,
   Nav,
   NewsComponent,
+  OurValues,
   StayInTouch,
 } from "../components";
+
 import { Link } from "react-router-dom";
 import hero from "../assets/hero.png";
 import ellipse from "../assets/ellipse-bg.png";
 import play from "../assets/ant-design_play-circle-filled.png";
 import messageIcon from "../assets/message-icon.png";
-import circle from "../assets/ep_help-filled.png";
-import person from "../assets/value-img.png";
+
 import testimonialImage1 from "../assets/person-img-1.png";
 import halfCircle from "../assets/half-circle.png";
 
@@ -32,7 +33,7 @@ const Home = () => {
       <div className="container">
         <header className="header">
           <Nav />
-          <section className="hero">
+          <section className="hero row-header">
             <div className="hero-text-section">
               <h1>
                 <span>Changing Your</span> Eating Habits
@@ -60,7 +61,7 @@ const Home = () => {
         <div className="container">
           <h3 className="title">Welcome</h3>
           {/*  */}
-          <div className="row">
+          <div className="row row-header">
             <div className="row sub-row">
               <img src={thinking} alt="" />
               <p className="sub-title">Did You Know?</p>
@@ -83,50 +84,17 @@ const Home = () => {
         </div>
       </section>
       {/* our values section */}
-      <section className="values-section">
-        <div className="container">
-          <div className="row">
-            <div className="img-col">
-              <img src={person} alt="" />
-            </div>
-            <div className="text-col">
-              <div className="row">
-                <img src={circle} alt="" />
-                <h4>Our value to help you</h4>
-              </div>
-              <h3>
-                We have always want to provide the best value for you and your
-                health
-              </h3>
-              {/* grid */}
-              <div className="grid">
-                <div className="grid-col grid-col-1">
-                  <p>Become Healthier</p>
-                </div>
-                <div className="grid-col">
-                  <p>Increase Energy</p>
-                </div>
-                <div className="grid-col">
-                  <p>Controlling weight</p>
-                </div>
-                <div className="grid-col">
-                  <p>Become happier</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <OurValues/>
       {/* article section */}
       <section className="article">
         <div className="container">
-          <div className="row">
+          <div className="row row-header">
             <div className="row sub-row">
               <img src={messageIcon} alt="" />
               <p className="sub-title">Articles</p>
             </div>
             <Link
-              to="/"
+              to="/articles"
               style={{
                 color: "rgba(63, 120, 30, 1)",
                 fontWeight: "500",
