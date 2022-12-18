@@ -1047,7 +1047,6 @@ body {
   }
 
   .news-article-section {
-    border: 2px solid red;
     height: 100%;
     padding: 10px 0;
   }
@@ -1073,6 +1072,14 @@ body {
   .did-you-know-item .absolute-contents .title {
     font-size: 28px;
     line-height: 32px;
+  }
+
+  .article-page-wrapper .news-section .row {
+    flex-direction: column;
+  }
+
+  .article-page-wrapper .news-section .news-image-section {
+    padding: 100px 0;
   }
 }
 
@@ -1145,6 +1152,12 @@ body {
     letter-spacing: 2%;
     text-align: justify;
   }
+
+  .news-content-section .news-content-list {
+  margin: 0 20px;
+  font-size: 20px;
+  line-height: 30px;
+}
 
   .news-section .todays-pick-header {
     font-size: 18px;
@@ -1221,4 +1234,8 @@ body {
   line-height: 43px;
   letter-spacing: 2%;
   color: rgba(35, 67, 17, 1);
+}
+
+.underline {
+  text-decoration: underline;
 }

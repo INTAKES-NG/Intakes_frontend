@@ -3,6 +3,7 @@ import { Footer, Nav, StayInTouch } from "../components";
 
 import plate from "../assets/fruit-juice-img.png";
 import newsImg from "../assets/news-img-1.png";
+import { Link } from "react-router-dom";
 
 const ArticlePage2 = () => {
   return (
@@ -12,23 +13,7 @@ const ArticlePage2 = () => {
         <div
           className="latest-news-header-section"
           style={{ margin: "40px 0 20px" }}
-        >
-          <h3
-            style={{
-              width: "100%",
-              background: "rgba(129, 178, 154, 1)",
-              color: "rgba(243, 240, 221, 1)",
-              textTransform: "uppercase",
-              padding: "10px 20px",
-              fontWeight: "400",
-              fontSize: "18px",
-              lineHeight: "22px",
-              fontFamily: "Lato",
-            }}
-          >
-            Latest Headlines
-          </h3>
-        </div>
+        ></div>
         <div className="news-section">
           <div className="row">
             <div
@@ -45,11 +30,69 @@ const ArticlePage2 = () => {
             <div
               className="news-article-section"
               style={{
-                flexBasis: "33%",
-                border: "2px solid red",
+                flexBasis: "25%",
                 height: "360px",
               }}
-            ></div>
+            >
+              <h3
+                style={{
+                  color: "rgba(35, 67, 17, 1)",
+                  fontSize: "20px",
+                  fontWeight: "600",
+                  marginBottom: "20px",
+                }}
+              >
+                Articles
+              </h3>
+              <Link
+                to="/article-3-food-to-avoid-for-a-healthier-lifestyle"
+                style={{
+                  color: "rgba(35, 67, 17, 1)",
+                  fontSize: "20px",
+                  fontWeight: "400",
+                  display: "block",
+                  padding: "10px 0",
+                }}
+              >
+                3 Foods To Avoid For A Healthier Lifestyle
+              </Link>
+              <Link
+                to="/article-6-Tips-to-control-food-sizes"
+                style={{
+                  color: "rgba(35, 67, 17, 1)",
+                  fontSize: "20px",
+                  fontWeight: "400",
+                  display: "block",
+                  padding: "10px 0",
+                }}
+              >
+                6 Tips to control food sizes
+              </Link>
+              <Link
+                to="/articles-Eat-these-carbs-to-live-longer"
+                style={{
+                  color: "rgba(35, 67, 17, 1)",
+                  fontSize: "20px",
+                  fontWeight: "400",
+                  display: "block",
+                  padding: "10px 0",
+                }}
+              >
+                Eat these carbs to live longer
+              </Link>
+              <Link
+                to="/articles"
+                style={{
+                  color: "rgba(35, 67, 17, 1)",
+                  fontSize: "20px",
+                  fontWeight: "400",
+                  display: "block",
+                  padding: "10px 0",
+                }}
+              >
+                An Excess of Salty Food Seasons the Body With Stress, Study Says
+              </Link>
+            </div>
           </div>
           <div className="news-content-section">
             <h3 className="news-title">
@@ -62,9 +105,7 @@ const ArticlePage2 = () => {
               healthy lifestyle.
             </p>
             <ul>
-              <li className="news-content-list">
-                Refined Sugar
-              </li>
+              <li className="news-content-list">Refined Sugar</li>
               <p className="news-content">
                 Consuming refined foods or drinks with refined sugar like soda,
                 cookies, cakes and pastries can be very harmful to the body and

@@ -88,11 +88,69 @@ const News = () => {
             <div
               className="news-article-section"
               style={{
-                flexBasis: "33%",
-                border: "2px solid red",
+                flexBasis: "30%",
                 height: "360px",
               }}
-            ></div>
+            >
+              <h3
+                style={{
+                  color: "rgba(35, 67, 17, 1)",
+                  fontSize: "20px",
+                  fontWeight: "600",
+                  marginBottom: "20px",
+                }}
+              >
+                Articles
+              </h3>
+              <Link
+                to="/article-3-food-to-avoid-for-a-healthier-lifestyle"
+                style={{
+                  color: "rgba(35, 67, 17, 1)",
+                  fontSize: "20px",
+                  fontWeight: "400",
+                  display: "block",
+                  padding: "10px 0",
+                }}
+              >
+                3 Foods To Avoid For A Healthier Lifestyle
+              </Link>
+              <Link
+                to="/article-6-Tips-to-control-food-sizes"
+                style={{
+                  color: "rgba(35, 67, 17, 1)",
+                  fontSize: "20px",
+                  fontWeight: "400",
+                  display: "block",
+                  padding: "10px 0",
+                }}
+              >
+                6 Tips to control food sizes
+              </Link>
+              <Link
+                to="/articles-Eat-these-carbs-to-live-longer"
+                style={{
+                  color: "rgba(35, 67, 17, 1)",
+                  fontSize: "20px",
+                  fontWeight: "400",
+                  display: "block",
+                  padding: "10px 0",
+                }}
+              >
+                Eat these carbs to live longer
+              </Link>
+              <Link
+                to="/articles"
+                style={{
+                  color: "rgba(35, 67, 17, 1)",
+                  fontSize: "20px",
+                  fontWeight: "400",
+                  display: "block",
+                  padding: "10px 0",
+                }}
+              >
+                An Excess of Salty Food Seasons the Body With Stress, Study Says
+              </Link>
+            </div>
           </div>
           <div className="news-content-section">
             <h3 className="news-title">{newsData[5]?.title}</h3>

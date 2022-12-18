@@ -16,11 +16,13 @@ import OurValues from "./OurValues";
 import ResN from "../pages/ResN";
 import NewNews from "../pages/ArticlePage";
 import { getDidYouKnow } from "../exportData/DidYouKnowData";
-import { article } from "../exportData/ArticeData";
+// import { article } from "../exportData/ArticeData";
 import Pagination from "./Pagination";
 import { paginate } from "../utils/paginate";
 import ArticlePage from "../pages/ArticlePage";
 import ArticlePage2 from "../pages/ArticlePage2";
+import ArticlePage3 from "../pages/ArticlePage3";
+import ArticlePage4 from "../pages/ArticlePage4";
 
 export {
   ResN,
@@ -45,5 +47,7 @@ export {
   paginate,
   ArticlePage,
   ArticlePage2,
-  article,
+  ArticlePage3,
+  ArticlePage4,
+  // article,
 };

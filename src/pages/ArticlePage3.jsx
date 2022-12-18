@@ -1,11 +1,10 @@
 import React from "react";
 import { Footer, Nav, StayInTouch } from "../components";
 
-import plate from "../assets/plate.png";
-import newsImg from "../assets/news-img-1.png";
+import plate from "../assets/fruit-juice-img.png";
 import { Link } from "react-router-dom";
 
-const NewNews = () => {
+const ArticlePage3 = () => {
   return (
     <div className="article-page-wrapper">
       <div className="container">
@@ -39,7 +38,7 @@ const NewNews = () => {
                   color: "rgba(35, 67, 17, 1)",
                   fontSize: "20px",
                   fontWeight: "600",
-                  marginBottom: '20px'
+                  marginBottom: "20px",
                 }}
               >
                 Articles
@@ -95,43 +94,64 @@ const NewNews = () => {
             </div>
           </div>
           <div className="news-content-section">
-            <h3 className="news-title">
-              An Excess of Salty Food Seasons the Body With Stress, Study Says
-            </h3>
+            <h3 className="news-title">6 Tips to control food sizes</h3>
             <p className="news-content">
-              Scientists found in studies of mice that a high-salt diet
-              increased the levels of a stress hormone by 75 per cent. Experts
-              hope the findings will encourage a review of public health policy
-              around salt consumption, with a view to manufacturers reducing the
-              amount of salt in processed food. The recommended salt intake for
-              adults is less than six grams a day but most people regularly eat
-              about nine grams. This can contribute to higher blood pressure,
-              which increases the risks of heart attacks, strokes and vascular
-              dementia. While effects on the heart and circulatory system have
-              been well established, little was known about the impact of a
-              high-salt diet on a person's behaviour. To study this, experts
-              from the University of Edinburgh used mice, who ordinarily have a
-              low-salt diet, and gave them high-salt food to reflect the typical
-              intake of humans. They found that not only did resting stress
-              hormone levels increase, but the mice's hormone response to
-              environmental stress was double that of mice that had a normal
-              diet. Salt intake increased the activity of genes that produce the
-              proteins in the brain which control how the body responds to
-              stress.
+              Measuring out every meal can become a daunting task. Yet it is an
+              important ritual that helps you control the amount of food you
+              eat. There are simple things we can do to help eat the right
+              serving size.
             </p>
             <p className="news-content">
-              Experts say further studies are already underway to understand if
-              a high-salt intake leads to other behavioural changes such as
-              anxiety and aggression. The study is published in Cardiovascular
-              Research. It was funded by the British Heart Foundation and Kidney
-              Research UK. Matthew Bailey, Professor of Renal Physiology at the
-              University of Edinburgh's Centre for Cardiovascular Science, said:
-              "We are what we eat and understanding how high-salt food changes
-              our mental health is an important step to improving wellbeing. We
-              know that eating too much salt damages our heart, blood vessels
-              and kidneys. This study now tells us that high salt in our food
-              also changes the way our brain handles stress."
+              To control your portion sizes when you are eating at home, try the
+              following tips:
             </p>
+            <ul>
+              <li className="news-content-list">
+                Avoid eating from a the bag.
+              </li>
+              <p className="news-content">
+                Always eat the serving size on the food package, as eating
+                straight from the bag could tempt uou into eating more than the
+                recommended food portion. You could be tempted to eat too much.
+                Use the serving size on the package to portion out the snack
+                into small bags or bowls.
+              </p>
+              <li className="news-content-list">
+                Half of your plate should contain green vegetables.{" "}
+              </li>
+              <p className="news-content">
+                Filling half of your plate with green vegetables before you
+                serve the rest of your entree is one of the easiest methods of
+                portion control.
+              </p>
+              <li className="news-content-list">
+                Serve food on smaller plates.
+              </li>
+              <p className="news-content">
+                Eat with smaller plate instead of a dinner plate.
+              </p>
+              <li className="news-content-list">
+                Substitute lower-fat varieties of food.
+              </li>
+              <p className="news-content">
+                Instead of whole-fat cream cheese, sour cream, and milk, buy
+                low-fat or skim instead.
+              </p>
+              <li className="news-content-list">Do not eat mindlessly</li>
+              <p className="news-content">
+                Pay attention to your meal, so that you will know when you have
+                had enough.
+              </p>
+              <li className="news-content-list">
+                Snack between meals if desired
+              </li>
+              <p className="news-content">
+                If you are hungry between meals, eat a healthy, high-fiber snack
+                such as a piece of fruit, small salad, or bowl of broth-based
+                soup. Snacks that pair protein and carbohydrates with fiber will
+                leave you more satisfied.
+              </p>
+            </ul>
           </div>
           <div className="top-pick-footer-section">
             <div className="row"></div>
@@ -144,4 +164,4 @@ const NewNews = () => {
   );
 };
 
-export default NewNews;
+export default ArticlePage3;

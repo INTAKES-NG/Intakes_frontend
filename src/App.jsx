@@ -13,6 +13,8 @@ import {
   NewNews,
   ArticlePage,
   ArticlePage2,
+  ArticlePage3,
+  ArticlePage4,
   NewsComponent,
 } from "./components";
 import DidYouKnowSingle from "./pages/DidYouKnowSingle";
@@ -29,7 +31,19 @@ function App() {
         <Route path="/news" element={<News />} />
         <Route path="/new/:id" element={<NewsComponentSingle />} />
         <Route path="/about" element={<About />} />
-        <Route path="/articles" element={<ArticlePage2 />} />
+        <Route path="/articles" element={<ArticlePage />} />
+        <Route
+          path="/articles-Eat-these-carbs-to-live-longer"
+          element={<ArticlePage4 />}
+        />
+        <Route
+          path="/article-3-food-to-avoid-for-a-healthier-lifestyle"
+          element={<ArticlePage2 />}
+        />
+        <Route
+          path="/article-6-Tips-to-control-food-sizes"
+          element={<ArticlePage3 />}
+        />
         <Route path="/contact" element={<Contact />} />
         <Route path="/*" element={<Error />} />
       </Routes>
