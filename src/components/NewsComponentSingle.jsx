@@ -6,6 +6,7 @@ import { Footer, Nav, StayInTouch } from "../components";
 const NewsComponentSingle = () => {
   const location = useLocation();
   const newsData = location?.state;
+  console.log(newsData);
   return (
     <div className="">
       <div className="container">

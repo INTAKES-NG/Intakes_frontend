@@ -33,17 +33,17 @@ const DidYouKnowArticles = () => {
     {
       title: "Unprocessed Food Is Healthiest",
       image: person,
-      link: "/",
+      link: "/didYouKnow",
     },
     {
       title: "Supplements Can Never Fully Replace Real Foods",
       image: apple,
-      link: "/",
+      link: "/didYouKnow",
     },
     {
       title: "Unprocessed Food Is Healthiest",
       image: person,
-      link: "/",
+      link: "/didYouKnow",
     },
   ];
 

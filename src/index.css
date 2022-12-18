@@ -1031,6 +1031,10 @@ body {
     font-size: 35px;
     line-height: 38px;
   }
+
+  .did-you-know-item {
+    width: 48%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1208,4 +1212,13 @@ body {
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
+}
+
+.news-content-list {
+  margin: 0 20px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 43px;
+  letter-spacing: 2%;
+  color: rgba(35, 67, 17, 1);
 }

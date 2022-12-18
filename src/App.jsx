@@ -12,6 +12,7 @@ import {
   ResN,
   NewNews,
   ArticlePage,
+  ArticlePage2,
   NewsComponent,
 } from "./components";
 import DidYouKnowSingle from "./pages/DidYouKnowSingle";
@@ -28,7 +29,7 @@ function App() {
         <Route path="/news" element={<News />} />
         <Route path="/new/:id" element={<NewsComponentSingle />} />
         <Route path="/about" element={<About />} />
-        <Route path="/articles" element={<ArticlePage />} />
+        <Route path="/articles" element={<ArticlePage2 />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/*" element={<Error />} />
       </Routes>

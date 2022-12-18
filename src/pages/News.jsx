@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { Footer, Nav, StayInTouch } from "../components";
 import "../styles/News.module.css";
 import { FallingLines } from "react-loader-spinner";
+import { Link } from "react-router-dom";
 
 const News = () => {
   // states
@@ -15,7 +16,7 @@ const News = () => {
     // fetch news
     try {
       const res = await axios.get(
-        "https://newsdata.io/api/1/news?apikey=pub_14368ab2138fb393bf9885224c719363db2aa&country=us,gb,ng&category=health"
+        "https://newsdata.io/api/1/news?apikey=pub_14368ab2138fb393bf9885224c719363db2aa&country=us,gb,ng&category=food,health"
       ); /**food */
       setLoading(false);
 
@@ -95,12 +96,7 @@ const News = () => {
           </div>
           <div className="news-content-section">
             <h3 className="news-title">{newsData[5]?.title}</h3>
-            <p
-              style={{
-                
-              }}
-              className="news-content"
-            >
+            <p style={{}} className="news-content">
               {newsData[5]?.content}
             </p>
             <p
@@ -126,25 +122,41 @@ const News = () => {
               TODAY’S TOP PICKS
             </h3>
             <div className="top-pick-row">
-              <div className="top-pick-item">
+              <Link
+                to={`/new/${newsData[0]?.title}`}
+                state={newsData[0]}
+                className="top-pick-item"
+              >
                 <img src={newsData[0]?.image_url} alt="image" />
                 <h5>{newsData[0]?.title}</h5>
-              </div>
+              </Link>
               {/*  */}
-              <div className="top-pick-item">
+              <Link
+                to={`/new/${newsData[1]?.title}`}
+                state={newsData[1]}
+                className="top-pick-item"
+              >
                 <img src={newsData[1]?.image_url} alt="image" />
                 <h5>{newsData[1]?.title}</h5>
-              </div>
+              </Link>
               {/*  */}
-              <div className="top-pick-item">
+              <Link
+                to={`/new/${newsData[3]?.title}`}
+                state={newsData[3]}
+                className="top-pick-item"
+              >
                 <img src={newsData[3]?.image_url} alt="image" />
                 <h5>{newsData[3]?.title}</h5>
-              </div>
+              </Link>
               {/*  */}
-              <div className="top-pick-item">
+              <Link
+                to={`/new/${newsData[4]?.title}`}
+                state={newsData[4]}
+                className="top-pick-item"
+              >
                 <img src={newsData[4]?.image_url} alt="image" />
                 <h5>{newsData[4]?.title}</h5>
-              </div>
+              </Link>
             </div>
           </div>
         </div>

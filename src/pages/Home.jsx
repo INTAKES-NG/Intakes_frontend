@@ -67,7 +67,7 @@ const Home = () => {
               <p className="sub-title">Did You Know?</p>
             </div>
             <Link
-              to="/"
+              to="/didYouKnow"
               style={{
                 color: "rgba(63, 120, 30, 1)",
                 fontWeight: "500",
@@ -78,13 +78,13 @@ const Home = () => {
             </Link>
           </div>
           {/* carousel */}
-          <div style={{margin: '50px 0px'}}>
+          <div style={{ margin: "50px 0px" }}>
             <DidYouKnowArticles />
           </div>
         </div>
       </section>
       {/* our values section */}
-      <OurValues/>
+      <OurValues />
       {/* article section */}
       <section className="article">
         <div className="container">
@@ -280,7 +280,7 @@ const Home = () => {
       </section>
       {/* news section */}
       <section className="news">
-        <NewsComponent/>
+        <NewsComponent />
       </section>
       {/* stay in touch */}
       <StayInTouch />

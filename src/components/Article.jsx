@@ -14,31 +14,31 @@ const Article = () => {
       title: "Unprocessed Food Is Healthiest",
       description:
         "Processed food is generally not as healthy as whole food. As the food system has become more industrialized, the health of the population has deteriorated. During food processing, many of the beneficial nutrients in the food are removed.....",
-      link: "/",
+      link: "/articles",
     },
     {
       title: "Supplements Can Never Fully Replace Real Foods",
       description:
         "“Nutritionism” is the idea that foods are nothing more than the sum of their individual nutrients. But it’s also a trap that many nutrition enthusiasts tend to fall into. Nuts, for example, aren’t just shells loaded with polyunsaturated fat.......",
-      link: "/",
+      link: "/articles",
     },
     {
       title: "Unprocessed Food Is Healthiest",
       description:
         "Processed food is generally not as healthy as whole food. As the food system has become more industrialized, the health of the population has deteriorated. During food processing, many of the beneficial nutrients in the food are removed.....",
-      link: "/",
+      link: "/articles",
     },
     {
       title: "Supplements Can Never Fully Replace Real Foods",
       description:
         "“Nutritionism” is the idea that foods are nothing more than the sum of their individual nutrients. But it’s also a trap that many nutrition enthusiasts tend to fall into. Nuts, for example, aren’t just shells loaded with polyunsaturated fat.......",
-      link: "/",
+      link: "/articles",
     },
     {
       title: "Unprocessed Food Is Healthiest",
       description:
         "Processed food is generally not as healthy as whole food. As the food system has become more industrialized, the health of the population has deteriorated. During food processing, many of the beneficial nutrients in the food are removed.....",
-      link: "/",
+      link: "/articles",
     },
   ];
 
