@@ -16,6 +16,7 @@
     "react-icons": "^4.7.1",
     "react-loader-spinner": "^5.3.4",
     "react-router-dom": "^6.4.4",
+    "react-social-media-embed": "^2.2.10",
     "swiper": "^8.4.5"
   },
   "devDependencies": {
