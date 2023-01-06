@@ -23,6 +23,10 @@ import ArticlePage from "../pages/ArticlePage";
 import ArticlePage2 from "../pages/ArticlePage2";
 import ArticlePage3 from "../pages/ArticlePage3";
 import ArticlePage4 from "../pages/ArticlePage4";
+import DietPage from "../pages/DietPage";
+import Healthy from "./Healthy";
+import DietPageSingle from "../pages/DietPageSingle";
+import { challengeData } from "../exportData/ChallengeData";
 
 export {
   ResN,
@@ -49,5 +53,9 @@ export {
   ArticlePage2,
   ArticlePage3,
   ArticlePage4,
+  DietPage,
+  Healthy,
+  challengeData,
+  DietPageSingle,
   // article,
 };

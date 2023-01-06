@@ -19,7 +19,7 @@ function Nav() {
           to="/"
           className="link"
           style={({ isActive }) =>
-            isActive ? { color: "red" } : { color: "#3F781E" }
+            isActive ? { color: "#234311" } : { color: "#7A876B" }
           }
         >
           Home
@@ -28,7 +28,7 @@ function Nav() {
           to="/news"
           className="link"
           style={({ isActive }) =>
-            isActive ? { color: "red" } : { color: "#3F781E" }
+            isActive ? { color: "#234311" } : { color: "#7A876B" }
           }
         >
           News
@@ -37,7 +37,7 @@ function Nav() {
           to="/articles"
           className="link"
           style={({ isActive }) =>
-            isActive ? { color: "red" } : { color: "#3F781E" }
+            isActive ? { color: "#234311" } : { color: "#7A876B" }
           }
         >
           Article
@@ -46,25 +46,26 @@ function Nav() {
           to="/didYouKnow"
           className="link"
           style={({ isActive }) =>
-            isActive ? { color: "red" } : { color: "#3F781E" }
+            isActive ? { color: "#234311" } : { color: "#7A876B" }
           }
         >
           Did You Know?
         </NavLink>
         <NavLink
-          to="/about"
+          to="/challenge"
           className="link"
           style={({ isActive }) =>
-            isActive ? { color: "red" } : { color: "#3F781E" }
+            isActive ? { color: "#234311" } : { color: "#7A876B" }
           }
         >
-          About Us
+          Nutritional Challenge
+          {/* About Us */}
         </NavLink>
         <NavLink
           to="/restaurant"
           className="link"
           style={({ isActive }) =>
-            isActive ? { color: "red" } : { color: "#3F781E" }
+            isActive ? { color: "#234311" } : { color: "#7A876B" }
           }
         >
           Restaurant Listings

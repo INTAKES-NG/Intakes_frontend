@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/white-logo.png";
+import logo from "../assets/newLogo.png";
 
 import {
   FaFacebookSquare,
@@ -41,23 +41,29 @@ const Footer = () => {
             <h4 className="footer-title">Helpful links</h4>
             <ul className="footer-ul">
               <li>
-                <Link className="footer-link" to="/retsaurant">
-                  Restaunrant listings
+                <Link className="footer-link" to="/news">
+                  News
                 </Link>
               </li>
+              <li>
+                <Link className="footer-link" to="/articles">
+                  Articles
+                </Link>
+              </li>
+
               <li>
                 <Link className="footer-link" to="/didYouKnow">
                   Did you know?
                 </Link>
               </li>
               <li>
-                <Link className="footer-link" to="/about">
-                  About us
+                <Link className="footer-link" to="/challenge">
+                  Nutritional Challenge
                 </Link>
               </li>
               <li>
-                <Link className="footer-link" to="/news">
-                  News
+                <Link className="footer-link" to="/restaurant">
+                  Restaunrant listings
                 </Link>
               </li>
             </ul>

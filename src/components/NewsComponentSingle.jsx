@@ -39,7 +39,7 @@ const NewsComponentSingle = () => {
             <div className="">
               <h1 className="news-title">{newsData?.title}</h1>
             </div>
-            <div className="firstddyNews-case full-news-case sss">
+            <div className="firstddyNews-case full-news-case">
               <div className="firstddyNews-case-right">
                 <p
                   className="news-content"

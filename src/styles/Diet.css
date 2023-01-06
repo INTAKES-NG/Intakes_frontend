@@ -1,0 +1,535 @@
+.diet-hero-wrapper {
+  background: rgba(243, 233, 206, 1);
+  padding: 10px 0;
+}
+
+.challenge-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 100vh;
+  height: 100%;
+  max-width: 85%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.challenge-header .hero-text-section {
+  flex-basis: 50%;
+}
+
+.challenge-header .hero-text-section p {
+  width: 80%;
+}
+
+.challenge-header .hero-text-section .btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 1);
+  background: rgba(99, 137, 53, 1);
+  border-radius: 8px;
+  padding: 12px 25px;
+  cursor: pointer;
+}
+
+.challenge-header .hero-text-section .btn:hover {
+  background: rgba(35, 67, 17, 1);
+  transition: 1s;
+}
+
+.challenge-header .hero-img-section {
+  flex-basis: 50%;
+}
+
+.hero-img-section img {
+  width: 100%;
+}
+
+/* new challenge styles */
+.challenge-cards .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card-container {
+  flex-basis: 32%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.card-container .upper {
+  height: 40%;
+  background: rgba(243, 229, 198, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 30px;
+}
+
+.card-container .upper-show {
+  background: rgba(59, 58, 57, 1);
+  height: 80%;
+}
+
+.card-container .upper-show .challenge-desc {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.card-container .upper-show .challenge-no {
+  color: rgba(255, 255, 255, 1);
+}
+
+.card-container .upper-show .challenge-title,
+.card-container .upper-show .challenge-desc {
+  color: rgba(255, 255, 255, 1);
+}
+
+.card-container .upper h3 {
+  color: rgba(35, 67, 17, 1);
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 38px;
+}
+
+.card-container .upper p {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 28px;
+  color: rgba(50, 28, 21, 1);
+}
+
+.card-container .lower {
+  background: rgba(59, 58, 57, 1);
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container .lower > button {
+  background: rgba(99, 137, 53, 1);
+  border: none;
+  color: rgba(255, 254, 247, 1);
+  padding: 15px 25px;
+  cursor: pointer;
+}
+
+.card-container .lower-btn {
+  background: rgba(255, 254, 247, 1);
+  border: none;
+  color: rgba(35, 67, 17, 1);
+  padding: 15px 25px;
+  border-radius: 8px;
+}
+
+.card-container .lower-btn:hover {
+  font-weight: 600;
+}
+
+.card-container .lower > button:hover {
+  background: rgba(35, 67, 17, 1);
+  transition: 1s;
+}
+
+.challenge-header .hero-section {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.challenge-header .hero-section h1 {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 80px;
+  color: rgba(35, 67, 17, 1);
+}
+
+.challenge-header .hero-section span {
+  color: rgba(99, 137, 53, 1);
+}
+
+.challenge-header .hero-section p {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 70px;
+  color: rgba(35, 67, 17, 1);
+}
+
+.single .challenge-cards .container {
+  margin: 50px auto;
+}
+
+.single .challenge-cards p {
+  text-align: center;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 50px;
+  color: rgba(35, 67, 17, 1);
+}
+
+.challenge-cards .single-form {
+  width: 50%;
+  margin: 30px auto;
+}
+
+.challenge-cards .single-form input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(35, 67, 17, 1);
+}
+
+.challenge-cards .single-form button {
+  background: rgba(35, 67, 17, 1);
+  display: block;
+  width: 30%;
+  margin: 10px auto;
+  padding: 15px 20px;
+  color: rgba(255, 255, 255, 1);
+  border: none;
+}
+
+.challenge-cards .single-form button:hover {
+  background: rgba(99, 137, 53, 1);
+  transition: 1s;
+}
+
+/*  */
+.healthy-section {
+  margin: 50px 0;
+  background: rgba(255, 254, 247, 1);
+}
+
+.healthy-section .img-section {
+  flex-basis: 35%;
+}
+
+.healthy-section .img-section img {
+  width: 100%;
+}
+
+.healthy-section .text-section {
+  flex-basis: 60%;
+}
+
+.healthy-section .text-section h3 {
+  color: rgba(35, 67, 17, 1);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  margin: 15px 0;
+}
+
+/* .healthy-section .text-section .row {
+  border: 2px solid red;
+} */
+
+.healthy-section .text-section .row .left {
+  flex-basis: 33%;
+  background: rgba(35, 67, 17, 1);
+  height: 100%;
+  padding: 30px 30px;
+  border-radius: 15px;
+}
+
+.healthy-section .text-section .row .right {
+  flex-basis: 63%;
+}
+
+.healthy-section .text-section .row .right p {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 34px;
+  color: rgba(98, 98, 98, 1);
+}
+
+.inner-diet-row {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.inner-diet-row .mark-icon {
+  background: rgba(255, 255, 255, 1);
+  padding: 5px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.inner-diet-row .mark-icon .icon {
+  color: red;
+}
+
+.inner-diet-row .txt p {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(255, 255, 255, 1);
+}
+
+/*  */
+
+.testimonial-rating {
+  background: rgba(242, 204, 143, 1);
+  padding: 40px 0;
+  text-align: center;
+}
+
+.testimonial-rating h2 {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  color: rgba(35, 67, 17, 1);
+  margin: 30px auto;
+  width: 75%;
+}
+
+.testimonial-rating .name {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: rgba(35, 67, 17, 1);
+  width: 75%;
+  margin: 30px auto;
+}
+
+.testimonial-rating span {
+  font-weight: 700;
+}
+
+.rating {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.rating .star-icon {
+  color: rgba(35, 67, 17, 1);
+  font-size: 40px;
+  margin: 0 5px;
+}
+
+/* challenge calender */
+.challenge-calender {
+  margin: 70px 0;
+}
+
+.challenge-calender .row .form-col {
+  flex-basis: 50%;
+}
+
+.challenge-calender .row .img-col {
+  flex-basis: 45%;
+}
+
+.challenge-calender .row .img-col img {
+  width: 100%;
+}
+
+.form-col .form-inner-container {
+  width: 75%;
+}
+
+.form-col .form-inner-container h3 {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  color: rgba(35, 67, 17, 1);
+  margin-bottom: 30px;
+}
+
+.form-col .form select,
+.form-col .form input {
+  display: block;
+  width: 100%;
+  height: 60px;
+  padding: 20px;
+  font-size: 16px;
+  margin: 20px 0;
+  outline: none;
+  color: rgba(35, 67, 17, 1);
+  font-weight: 600;
+}
+
+.form-col .form input::placeholder,
+.form-col .form select {
+  color: rgba(35, 67, 17, 1);
+  font-weight: 600;
+}
+
+.form-col .form button {
+  display: block;
+  background: rgba(35, 67, 17, 1);
+  color: rgba(255, 255, 255, 1);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  padding: 20px 30px;
+  cursor: pointer;
+}
+
+.challenge-wrapper form .accept_btn {
+  width: 100%;
+  transition: all 1s;
+}
+
+.challenge-wrapper form .accept_btn:hover {
+  transform: scaleX(1.05) scaleY(1.2);
+}
+
+/*  */
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 600px) {
+  /* .challenge-wrapper {
+        border: 2px solid red;
+    } */
+
+  .diet-hero-wrapper {
+    padding: 0;
+  }
+
+  .diet-hero-wrapper .challenge-header {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .diet-hero-wrapper .hero-text-section p {
+    width: 100%;
+  }
+
+  .diet-hero-wrapper .hero-text-section .btn {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .healthy-section {
+    margin: 0;
+  }
+
+  .healthy-section .row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .healthy-section .text-section h3 {
+    font-size: 26px;
+    line-height: 28px;
+    margin: 15px 0 30px;
+  }
+
+  .healthy-section .text-section .row .left {
+    width: 100%;
+    padding: 30px 20px;
+    margin: 0 0 30px;
+  }
+
+  .healthy-section .text-section .row .right p {
+    font-size: 20px;
+    line-height: 28px;
+    text-align: justify;
+  }
+
+  /* .testimonial-rating {
+    border: 2px solid red;
+  } */
+
+  .testimonial-rating .container {
+    padding: 0 20px;
+  }
+
+  .testimonial-rating h2 {
+    width: 100%;
+    font-size: 30px;
+    line-height: 32px;
+  }
+
+  .testimonial-rating .name {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .rating {
+    width: 100%;
+  }
+
+  .rating .star-icon {
+    font-size: 30px;
+    margin: 0;
+  }
+
+  /* .challenge-calender {
+    border: 2px solid red;
+  } */
+
+  .challenge-calender .row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form-col .form-inner-container {
+    width: 100%;
+  }
+
+  .form-col .form-inner-container h3 {
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 30px;
+  }
+
+  .challenge-header .hero-section h1 {
+    font-size: 40px;
+    line-height: 45px;
+    margin-bottom: 20px;
+  }
+
+  .challenge-header .hero-section p {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .single .challenge-cards p {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .challenge-cards .single-form input {
+    width: 100%;
+  }
+
+  .challenge-cards .single-form button {
+    width: 100%;
+  }
+
+  .challenge-cards .container {
+    padding: 0 20px;
+  }
+
+  .card-container {
+    margin: 20px auto;
+    flex-basis: 100%;
+  }
+
+  .card-container .upper .challenge-desc {
+    font-size: 16px;
+  }
+}

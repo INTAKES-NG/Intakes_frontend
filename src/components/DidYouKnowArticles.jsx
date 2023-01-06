@@ -1,6 +1,6 @@
 import React from "react";
 
-import Logo from "../assets/logo.png";
+import Logo from "../assets/newLogo.png";
 import LogoWhite from "../assets/white-logo.png";
 import person from "../assets/person.png";
 import apple from "../assets/apple.png";
@@ -31,17 +31,17 @@ const DidYouKnowArticles = () => {
   // style
   const articles = [
     {
-      title: "Unprocessed Food Is Healthiest",
+      title: "There is more sugar in lemon than in strawberries",
       image: person,
       link: "/didYouKnow",
     },
     {
-      title: "Supplements Can Never Fully Replace Real Foods",
+      title: "Avocado has the highest protein content of any fruit.",
       image: apple,
       link: "/didYouKnow",
     },
     {
-      title: "Unprocessed Food Is Healthiest",
+      title: "Low-fat usually means “sugar added” and should be avoided.",
       image: person,
       link: "/didYouKnow",
     },
@@ -56,10 +56,10 @@ const DidYouKnowArticles = () => {
             borderRadius: "8px",
             padding: "20px",
             background: isHover
-              ? `linear-gradient(rgba(242, 204, 143, .8),rgba(242, 204, 143, 0.6)), url(${article.image}`
-              : `url(${article.image}`,
-            backgroundPosition: `isHover? "center" : "center"`,
-            backgroundSize: "cover",
+              ? `linear-gradient(rgba(0, 0, 0, .8),rgba(0, 0, 0, 0.6)), url(${article.image}`
+              : `linear-gradient(rgba(242, 204, 143, .8),rgba(242, 204, 143, 0.6)),url(${article.image}`,
+            backgroundPosition: isHover? "center" : "center",
+            backgroundSize: isHover? "cover" : "cover",
             backgroundRepeat: "no-repeat",
             height: "400px",
             display: "flex",
@@ -71,13 +71,13 @@ const DidYouKnowArticles = () => {
           onMouseLeave={handleMouseLeave}
         >
           <img
-            src={isHover ? LogoWhite : Logo}
+            src={isHover ? Logo : Logo}
             alt=""
             style={{
               position: "absolute",
               top: "3%",
               left: "5%",
-              width: "50px",
+              width: "60px",
               height: "50px",
             }}
           />
@@ -87,9 +87,8 @@ const DidYouKnowArticles = () => {
                 fontWeight: "600",
                 fontSize: "24px",
                 lineHeight: "28px",
-                color: isHover
-                  ? "rgba(63, 120, 30, 1)"
-                  : "rgba(242, 204, 143, 1)",
+                color: isHover ? "white" : "rgba(63, 120, 30, 1)",
+                textAlign: "center",
               }}
             >
               {article.title}
@@ -99,7 +98,7 @@ const DidYouKnowArticles = () => {
             <Link
               to={article.link}
               style={{
-                background: "rgba(63, 120, 30, 1)",
+                background: isHover ? "rgba(63, 120, 30, 1)" : "transparent",
                 color: "#fff",
                 textDecoration: "none",
                 padding: "10px 20px",
@@ -109,6 +108,7 @@ const DidYouKnowArticles = () => {
                 right: "4%",
                 fontSize: "18px",
                 fontWeight: "500",
+                border: isHover ? "none" : "1px solid rgba(63, 120, 30, 1)",
               }}
             >
               Learn More
@@ -122,10 +122,11 @@ const DidYouKnowArticles = () => {
     <div>
       <Swiper
         spaceBetween={50}
-        slidesPerView={1.5}
+        slidesPerView={1.3}
         centeredSlides={true}
+        // autoplay={false}
         autoplay={{
-          delay: 3500,
+          delay: 4500,
           disableOnInteraction: false,
         }}
         pagination={{

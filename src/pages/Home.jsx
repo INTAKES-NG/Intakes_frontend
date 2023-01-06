@@ -3,6 +3,7 @@ import {
   Article,
   DidYouKnowArticles,
   Footer,
+  Healthy,
   Nav,
   NewsComponent,
   OurValues,
@@ -12,20 +13,9 @@ import {
 import { Link } from "react-router-dom";
 import hero from "../assets/hero.png";
 import ellipse from "../assets/ellipse-bg.png";
-import play from "../assets/ant-design_play-circle-filled.png";
 import messageIcon from "../assets/message-icon.png";
 
-import testimonialImage1 from "../assets/person-img-1.png";
-import halfCircle from "../assets/half-circle.png";
-
 import thinking from "../assets/thinking-icon.png";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-
-import "swiper/css";
 
 const Home = () => {
   return (
@@ -43,10 +33,10 @@ const Home = () => {
                 consume everyday.
               </p>
 
-              <a href="" className="hero-btn">
+              {/* <a href="" className="hero-btn">
                 <img src={play} alt="" className="play-btn" />
                 Watch Video
-              </a>
+              </a> */}
             </div>
             <div className="hero-img-section">
               <img src={hero} alt="" className="hero-img" />
@@ -111,7 +101,8 @@ const Home = () => {
         </div>
       </section>
       {/* testimonial section */}
-      <section className="testimonial">
+      <Healthy />
+      {/* <section className="testimonial">
         <div className="container">
           <Swiper
             spaceBetween={10}
@@ -277,7 +268,7 @@ const Home = () => {
             </SwiperSlide>
           </Swiper>
         </div>
-      </section>
+      </section> */}
       {/* news section */}
       <section className="news">
         <NewsComponent />
