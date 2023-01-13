@@ -1,14 +1,17 @@
 import React from "react";
 
 import Logo from "../assets/newLogo.png";
-import LogoWhite from "../assets/white-logo.png";
 import person from "../assets/person.png";
 import apple from "../assets/apple.png";
+import fruitJuice from "../assets/fruit-juice-img.png";
+import egg from "../assets/egg-img.png";
+import seaFood from "../assets/seafood-img.png";
+import strawberry from "../assets/strawberry.png";
 
 import { Link } from "react-router-dom";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper";
+import { Autoplay, Pagination } from "swiper";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
@@ -16,18 +19,6 @@ import "swiper/css";
 import { useState } from "react";
 
 const DidYouKnowArticles = () => {
-  // state for mouse over
-  const [isHover, setIsOver] = useState(false);
-  // mouse enter handler
-  const handleMouseEnter = () => {
-    setIsOver(true);
-  };
-
-  // handle mouse leave
-  const handleMouseLeave = () => {
-    setIsOver(false);
-  };
-
   // style
   const articles = [
     {
@@ -45,96 +36,111 @@ const DidYouKnowArticles = () => {
       image: person,
       link: "/didYouKnow",
     },
+    {
+      title: "Fruit juice has as much sugar as Soda",
+      image: fruitJuice,
+    },
+    {
+      title: "There is more sugar in lemon than in strawberries",
+      image: egg,
+    },
+    {
+      title: "All part of an egg are good for you and packed with nutrition",
+      image: seaFood,
+    },
+    {
+      title:
+        "Broccoli contains twice the amount of Vitamin C in an orange, it contains as much calcium as whole milk.",
+      image: strawberry,
+    },
   ];
 
-  const mappedArticles = articles.map((article) => {
+  const mappedArticles = articles.map(({ title, image, link }) => {
     return (
-      <SwiperSlide>
+      <SwiperSlide key={title}>
         <div
           style={{
             height: "200px",
             borderRadius: "8px",
-            padding: "20px",
-            background: isHover
-              ? `linear-gradient(rgba(0, 0, 0, .8),rgba(0, 0, 0, 0.6)), url(${article.image}`
-              : `linear-gradient(rgba(242, 204, 143, .8),rgba(242, 204, 143, 0.6)),url(${article.image}`,
-            backgroundPosition: isHover? "center" : "center",
-            backgroundSize: isHover? "cover" : "cover",
-            backgroundRepeat: "no-repeat",
             height: "400px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             position: "relative",
+            overflow: "hidden",
           }}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
         >
-          <img
-            src={isHover ? Logo : Logo}
-            alt=""
-            style={{
-              position: "absolute",
-              top: "3%",
-              left: "5%",
-              width: "60px",
-              height: "50px",
-            }}
-          />
-          <div>
-            <h3
-              style={{
-                fontWeight: "600",
-                fontSize: "24px",
-                lineHeight: "28px",
-                color: isHover ? "white" : "rgba(63, 120, 30, 1)",
-                textAlign: "center",
-              }}
-            >
-              {article.title}
-              {/* {detailsData?.content} */}
-              {/* {article.title} */}
-            </h3>
-            <Link
-              to={article.link}
-              style={{
-                background: isHover ? "rgba(63, 120, 30, 1)" : "transparent",
-                color: "#fff",
-                textDecoration: "none",
-                padding: "10px 20px",
-                borderRadius: "8px",
-                position: "absolute",
-                bottom: "4%",
-                right: "4%",
-                fontSize: "18px",
-                fontWeight: "500",
-                border: isHover ? "none" : "1px solid rgba(63, 120, 30, 1)",
-              }}
-            >
-              Learn More
-            </Link>
+          <div
+            className="relative-img"
+            style={{ width: "100%", height: "100%" }}
+          >
+            <img src={image} alt="" style={{ width: "100%", height: "100%" }} />
+          </div>
+          <div className="absolute-contents">
+            <div className="flex-item">
+              <img
+                src={Logo}
+                alt="logo"
+                style={{
+                  position: "absolute",
+                  top: "3%",
+                  left: "5%",
+                  width: "60px",
+                  height: "50px",
+                }}
+              />
+              <h3
+                className="title"
+                style={{
+                  fontWeight: "400",
+                  fontSize: "32px",
+                  lineHeight: "38px",
+                  color: "white",
+                  textAlign: "left",
+                }}
+              >
+                {title}
+              </h3>
+            </div>
           </div>
         </div>
       </SwiperSlide>
     );
   });
   return (
-    <div>
+    <div className="did__you__know__section">
       <Swiper
-        spaceBetween={50}
-        slidesPerView={1.3}
+        spaceBetween={30}
+        slidesPerView={1.5}
         centeredSlides={true}
-        // autoplay={false}
         autoplay={{
-          delay: 4500,
+          delay: 2000,
           disableOnInteraction: false,
         }}
         pagination={{
           clickable: true,
         }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
+        modules={[Autoplay, Pagination]}
         className="mySwiper"
+        style={{ paddingBottom: "4rem" }}
+      >
+        {mappedArticles}
+      </Swiper>
+      {/* mobile */}
+      <Swiper
+        spaceBetween={30}
+        slidesPerView={1}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Autoplay, Pagination]}
+        className="mySwiperMobile"
+        style={{ paddingBottom: "4rem" }}
       >
         {mappedArticles}
       </Swiper>

@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 import hero from "../assets/hero.png";
 import ellipse from "../assets/ellipse-bg.png";
 import messageIcon from "../assets/message-icon.png";
+import download from "../assets/download-btn.png";
 
 import thinking from "../assets/thinking-icon.png";
 
@@ -33,10 +34,10 @@ const Home = () => {
                 consume everyday.
               </p>
 
-              {/* <a href="" className="hero-btn">
-                <img src={play} alt="" className="play-btn" />
-                Watch Video
-              </a> */}
+              <a href="" className="hero-btn" download>
+                <p>Download PDF</p>
+                <img src={download} alt="" className="play-btn" />
+              </a>
             </div>
             <div className="hero-img-section">
               <img src={hero} alt="" className="hero-img" />
@@ -46,33 +47,6 @@ const Home = () => {
       </div>
       {/* absolute hero image */}
       <img src={ellipse} alt="" className="absolute-img" />
-      {/* welcome section */}
-      <section className="welcome-sec">
-        <div className="container">
-          <h3 className="title">Welcome</h3>
-          {/*  */}
-          <div className="row row-header">
-            <div className="row sub-row">
-              <img src={thinking} alt="" />
-              <p className="sub-title">Did You Know?</p>
-            </div>
-            <Link
-              to="/didYouKnow"
-              style={{
-                color: "rgba(63, 120, 30, 1)",
-                fontWeight: "500",
-                textDecoration: "none",
-              }}
-            >
-              Load More &#8594;
-            </Link>
-          </div>
-          {/* carousel */}
-          <div style={{ margin: "50px 0px" }}>
-            <DidYouKnowArticles />
-          </div>
-        </div>
-      </section>
       {/* our values section */}
       <OurValues />
       {/* article section */}
@@ -94,185 +68,44 @@ const Home = () => {
               Load More &#8594;
             </Link>
           </div>
-          {/* article slides */}
-          <article className="article-slide">
-            <Article />
-          </article>
+        </div>
+        {/* article slides */}
+        <article className="article-slide">
+          <Article />
+        </article>
+      </section>
+      {/* welcome section */}
+      <section className="welcome-sec">
+        <div className="container welcome-container">
+          <div className="row row-header">
+            <div className="row sub-row">
+              <img src={thinking} alt="" />
+              <p className="sub-title">Did You Know?</p>
+            </div>
+            <Link
+              to="/didYouKnow"
+              style={{
+                color: "rgba(63, 120, 30, 1)",
+                fontWeight: "500",
+                textDecoration: "none",
+              }}
+            >
+              Load More &#8594;
+            </Link>
+          </div>
+          {/* carousel */}
+          <div style={{ margin: "30px 0px" }}>
+            <DidYouKnowArticles />
+          </div>
         </div>
       </section>
       {/* testimonial section */}
       <Healthy />
-      {/* <section className="testimonial">
-        <div className="container">
-          <Swiper
-            spaceBetween={10}
-            centeredSlides={true}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-            }}
-            pagination={{
-              clickable: true,
-            }}
-            navigation={false}
-            modules={[Autoplay, Pagination, Navigation]}
-            className="mySwiper"
-          >
-            <SwiperSlide>
-              <div className="row">
-                <div className="col-1">
-                  <img src={halfCircle} alt="" className="absolute-bg" />
-                  <div className="testimonial-text">
-                    <img
-                      src={testimonialImage1}
-                      alt=""
-                      style={{ width: "100px", height: "100px" }}
-                    />
-                    <h4>Nicole Elohor .S.</h4>
-                    <p>
-                      Being a student and an entrepreneur at th ame time makes
-                      knowing the right combination of food a bit of a stress as
-                      i’m busy all day, but thanks to INTAKE.NG for making it
-                      less stressful with the health and food combination tips
-                      and restaurant listings.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-2">
-                  <div className="content-container">
-                    <div className="row">
-                      <img src={messageIcon} alt="" />
-                      <h4>Testimonials about us</h4>
-                    </div>
-                    <p>
-                      "Processed food is generally not as healthy as whole food.
-                      As the food system has become more industrialized, the
-                      health of the population has deteriorated. During food
-                      processing, many of the benefitial nutrients in the food
-                      are removed..."
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="row">
-                <div className="col-1">
-                  <img src={halfCircle} alt="" className="absolute-bg" />
-                  <div className="testimonial-text">
-                    <img
-                      src={testimonialImage1}
-                      alt=""
-                      style={{ width: "100px", height: "100px" }}
-                    />
-                    <h4>Nicole Elohor .S.</h4>
-                    <p>
-                      Being a student and an entrepreneur at th ame time makes
-                      knowing the right combination of food a bit of a stress as
-                      i’m busy all day, but thanks to INTAKE.NG for making it
-                      less stressful with the health and food combination tips
-                      and restaurant listings.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-2">
-                  <div className="content-container">
-                    <div className="row">
-                      <img src={messageIcon} alt="" />
-                      <h4>Testimonials about us</h4>
-                    </div>
-                    <p>
-                      "Processed food is generally not as healthy as whole food.
-                      As the food system has become more industrialized, the
-                      health of the population has deteriorated. During food
-                      processing, many of the benefitial nutrients in the food
-                      are removed..."
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="row">
-                <div className="col-1">
-                  <img src={halfCircle} alt="" className="absolute-bg" />
-                  <div className="testimonial-text">
-                    <img
-                      src={testimonialImage1}
-                      alt=""
-                      style={{ width: "100px", height: "100px" }}
-                    />
-                    <h4>Nicole Elohor .S.</h4>
-                    <p>
-                      Being a student and an entrepreneur at th ame time makes
-                      knowing the right combination of food a bit of a stress as
-                      i’m busy all day, but thanks to INTAKE.NG for making it
-                      less stressful with the health and food combination tips
-                      and restaurant listings.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-2">
-                  <div className="content-container">
-                    <div className="row">
-                      <img src={messageIcon} alt="" />
-                      <h4>Testimonials about us</h4>
-                    </div>
-                    <p>
-                      "Processed food is generally not as healthy as whole food.
-                      As the food system has become more industrialized, the
-                      health of the population has deteriorated. During food
-                      processing, many of the benefitial nutrients in the food
-                      are removed..."
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="row">
-                <div className="col-1">
-                  <img src={halfCircle} alt="" className="absolute-bg" />
-                  <div className="testimonial-text">
-                    <img
-                      src={testimonialImage1}
-                      alt=""
-                      style={{ width: "100px", height: "100px" }}
-                    />
-                    <h4>Nicole Elohor .S.</h4>
-                    <p>
-                      Being a student and an entrepreneur at th ame time makes
-                      knowing the right combination of food a bit of a stress as
-                      i’m busy all day, but thanks to INTAKE.NG for making it
-                      less stressful with the health and food combination tips
-                      and restaurant listings.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-2">
-                  <div className="content-container">
-                    <div className="row">
-                      <img src={messageIcon} alt="" />
-                      <h4>Testimonials about us</h4>
-                    </div>
-                    <p>
-                      "Processed food is generally not as healthy as whole food.
-                      As the food system has become more industrialized, the
-                      health of the population has deteriorated. During food
-                      processing, many of the benefitial nutrients in the food
-                      are removed..."
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-          </Swiper>
-        </div>
-      </section> */}
       {/* news section */}
       <section className="news">
         <NewsComponent />
       </section>
+
       {/* stay in touch */}
       <StayInTouch />
       <Footer />

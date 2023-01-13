@@ -2,9 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper";
+import { Pagination } from "swiper";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
 
 import "swiper/css";
 
@@ -57,21 +56,29 @@ const Article = () => {
   });
 
   return (
-    <div>
+    <div className="hero-article-section">
       <Swiper
-        spaceBetween={50}
-        slidesPerView={1.8}
-        centeredSlides={true}
-        autoplay={{
-          delay: 3500,
-          disableOnInteraction: false,
-        }}
+        spaceBetween={30}
+        slidesPerView={2}
+        centeredSlides={false}
         pagination={{
           clickable: true,
         }}
-        navigation={false}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
+        modules={[ Pagination]}
+        className="mySwiperArticle"
+      >
+        {mappedArticles}
+      </Swiper>
+      {/* mobile */}
+      <Swiper
+        spaceBetween={30}
+        slidesPerView={1}
+        centeredSlides={false}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[ Pagination]}
+        className="mySwiperArticleMobile"
       >
         {mappedArticles}
       </Swiper>
