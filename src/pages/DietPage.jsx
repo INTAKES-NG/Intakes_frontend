@@ -23,33 +23,6 @@ const DietPage = () => {
     event.preventDefault();
     setIsShown((current) => !current);
   };
-  // mapped challenges
-  // const mappedChallenge = challenge.map((challenge) => {
-  //   if (isShown) {
-  //     return (
-  //       <div className="challenge-container">
-  //         details
-  //         <button onClick={handleClick}>close</button>
-  //       </div>
-  //     );
-  //   } else {
-  //     return (
-  //       <div className="challenge-container">
-  //         <div className="upper">
-  //           <div>
-  //             <h3>{`CHALLENGE 0${challenge.number}`}</h3>
-  //             <p>{challenge.challengeTitle}</p>
-  //           </div>
-  //         </div>
-  //         <div className="lower">
-  //           <button className="show-btn" onClick={handleClick}>
-  //             Read more
-  //           </button>
-  //         </div>
-  //       </div>
-  //     );
-  //   }
-  // });
   return (
     <div className="challenge-wrapper">
       <div className="diet-hero-wrapper">
@@ -76,7 +49,7 @@ const DietPage = () => {
         </div>
       </div>
       {/*  */}
-      <section className="challenge-cards">
+      <section className="challenge-cards" id="form-col">
         <div className="container">
           {/*  */}
           <div className="card-container">
@@ -251,7 +224,12 @@ const DietPage = () => {
                     placeholder="Email address"
                     name="email_address"
                   />
-                  <button className="accept_btn">I ACCEPT! Lets Start</button>
+                  <button
+                    className="accept_btn"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    I ACCEPT! Lets Start
+                  </button>
                 </form>
               </div>
             </div>
@@ -265,162 +243,3 @@ const DietPage = () => {
 };
 
 export default DietPage;
-
-// {/* <section className="healthy-section">
-//   <div className="container">
-//     <div className="row">
-//       <div className="img-section">
-//         <img src={woman} alt="" />
-//       </div>
-//       <div className="text-section">
-//         <h3>10 Weeks to a Healthier You.</h3>
-//         <div className="row">
-//           <div className="left">
-//             {/*  */}
-//             <div className="inner-diet-row">
-//               <div className="mark-icon">
-//                 <ImCheckmark className="icon" />
-//               </div>
-//               <div className="txt">
-//                 <p>Weekly Recipes</p>
-//               </div>
-//             </div>
-//             {/*  */}
-//             <div className="inner-diet-row">
-//               <div className="mark-icon">
-//                 <ImCheckmark className="icon" />
-//               </div>
-//               <div className="txt">
-//                 <p>Exercise Tips</p>
-//               </div>
-//             </div>
-//             {/*  */}
-//             <div className="inner-diet-row">
-//               <div className="mark-icon">
-//                 <ImCheckmark className="icon" />
-//               </div>
-//               <div className="txt">
-//                 <p>Nutrition Guides</p>
-//               </div>
-//             </div>
-//           </div>
-//           <div className="right">
-//             <p>
-//               The Intakes.ng Challenge is a great way to kickstart your journey
-//               to a healthier lifestyle. Each week you’ll conquer a different
-//               challenge focused on making better food decisions and being more
-//               active. And you’ll get all the tools you need along the way.
-//             </p>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   </div>
-// </section>; */}
-
-{
-  /* <div className="container">
-  {isShown ? (
-    <div className="card-container">
-      <div className="upper upper-show">
-        <div>
-          <h3 className="challenge-no">{`CHALLENGE 0${challenge[0]?.number}`}</h3>
-          <p className="challenge-title">{challenge[0]?.challengeTitle}</p>
-          <p className="challenge-desc">{challenge[0]?.description}</p>
-        </div>
-      </div>
-      <div className="lower">
-        <Link
-          className="lower-btn"
-          state={challenge[0]}
-          to={`/challenge/${challenge[0]?.challengeTitle}`}
-        >
-          Accept challenge
-        </Link>
-      </div>
-    </div>
-  ) : (
-    <div className="card-container">
-      <div className="upper">
-        <div>
-          <h3>{`CHALLENGE 0${challenge[0]?.number}`}</h3>
-          <p>{challenge[0]?.challengeTitle}</p>
-        </div>
-      </div>
-      <div className="lower">
-        <button className="show-btn" onClick={handleClick}>
-          Read more
-        </button>
-      </div>
-    </div>
-  )}
-  {isShown ? (
-    <div className="card-container">
-      <div className="upper upper-show">
-        <div>
-          <h3 className="challenge-no">{`CHALLENGE 0${challenge[1]?.number}`}</h3>
-          <p className="challenge-title">{challenge[1]?.challengeTitle}</p>
-          <p className="challenge-desc">{challenge[1]?.description}</p>
-        </div>
-      </div>
-      <div className="lower">
-        <Link
-          className="lower-btn"
-          state={challenge[1]}
-          to={`/challenge/${challenge[1]?.challengeTitle}`}
-        >
-          Accept challenge
-        </Link>
-      </div>
-    </div>
-  ) : (
-    <div className="card-container">
-      <div className="upper">
-        <div>
-          <h3>{`CHALLENGE 0${challenge[1]?.number}`}</h3>
-          <p>{challenge[1]?.challengeTitle}</p>
-        </div>
-      </div>
-      <div className="lower">
-        <button className="show-btn" onClick={handleClick}>
-          Read more
-        </button>
-      </div>
-    </div>
-  )}
-  {isShown ? (
-    <div className="card-container">
-      <div className="upper upper-show">
-        <div>
-          <h3 className="challenge-no">{`CHALLENGE 0${challenge[2]?.number}`}</h3>
-          <p className="challenge-title">{challenge[2]?.challengeTitle}</p>
-          <p className="challenge-desc">{challenge[2]?.description}</p>
-        </div>
-      </div>
-      <div className="lower">
-        <Link
-          className="lower-btn"
-          state={challenge[2]}
-          to={`/challenge/${challenge[2]?.challengeTitle}`}
-        >
-          Accept challenge
-        </Link>
-      </div>
-    </div>
-  ) : (
-    <div className="card-container">
-      <div className="upper">
-        <div>
-          <h3>{`CHALLENGE 0${challenge[2]?.number}`}</h3>
-          <p>{challenge[2]?.challengeTitle}</p>
-        </div>
-      </div>
-      <div className="lower">
-        <button className="show-btn" onClick={handleClick}>
-          Read more
-        </button>
-      </div>
-    </div>
-  )}
-</div>; */
-}

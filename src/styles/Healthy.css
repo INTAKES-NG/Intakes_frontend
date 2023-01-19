@@ -67,6 +67,11 @@
 
 .box .inner-diet-row .mark-icon {
   margin-right: 20px;
+  padding: 8px;
+}
+
+.icon {
+  font-size: 16px;
 }
 
 .accept-btn {

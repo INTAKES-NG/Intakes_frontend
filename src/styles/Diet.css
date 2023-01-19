@@ -1,6 +1,6 @@
 .diet-hero-wrapper {
   background: rgba(243, 233, 206, 1);
-  padding: 10px 0;
+  padding: 0;
 }
 
 .challenge-header {
@@ -30,6 +30,8 @@
   background: rgba(99, 137, 53, 1);
   border-radius: 8px;
   padding: 12px 25px;
+  display: inline-block;
+  margin-top: 10px;
   cursor: pointer;
 }
 
@@ -188,6 +190,7 @@
   font-weight: 500;
   background: rgba(255, 255, 255, 1);
   border: 1px solid rgba(35, 67, 17, 1);
+  outline: none;
 }
 
 .challenge-cards .single-form button {
@@ -198,6 +201,8 @@
   padding: 15px 20px;
   color: rgba(255, 255, 255, 1);
   border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .challenge-cards .single-form button:hover {
@@ -510,6 +515,10 @@
   .single .challenge-cards p {
     font-size: 22px;
     line-height: 30px;
+  }
+
+  .challenge-cards .single-form {
+    width: 100%;
   }
 
   .challenge-cards .single-form input {

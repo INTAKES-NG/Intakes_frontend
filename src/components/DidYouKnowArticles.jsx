@@ -93,8 +93,8 @@ const DidYouKnowArticles = () => {
                 className="title"
                 style={{
                   fontWeight: "400",
-                  fontSize: "32px",
-                  lineHeight: "38px",
+                  fontSize: "30px",
+                  lineHeight: "33px",
                   color: "white",
                   textAlign: "left",
                 }}

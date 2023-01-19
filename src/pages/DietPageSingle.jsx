@@ -34,7 +34,7 @@ const DietPageSingle = () => {
           </p>
           <form action="" className="single-form">
             <input type="email" placeholder="Email Adress" />
-            <button type="submit">I ACCEPT! Let’s Start</button>
+            <button type="submit" onClick={(e) => e.preventDefault()}>I ACCEPT! Let’s Start</button>
           </form>
         </div>
       </section>
